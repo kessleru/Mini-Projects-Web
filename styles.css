@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --purple-primary: #a855f7;
+    --purple-dark: #7c3aed;
+    --purple-light: #c084fc;
+    --bg-dark: #0a0a0a;
+    --bg-card: #1a1a1a;
+    --text-light: #e5e5e5;
+    --text-gray: #a3a3a3;
+    --cursor-color: #22c55e;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* Header */
+header {
+    padding: 2rem 0;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.logo-link {
+    text-decoration: none;
+    color: var(--text-light);
+    display: inline-flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.logo-link:hover {
+    transform: translateY(-2px);
+}
+
+.logo-link:hover::after {
+    background: var(--cursor-color);
+    box-shadow: 0 0 10px var(--cursor-color);
+}
+
+.logo-link::after {
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 3px;
+    background: var(--cursor-color);
+    position: absolute;
+    right: -15px;
+    bottom: 5px;
+    animation: blink 2.5s infinite;
+    transition: all 0.3s ease;
+}
+
+.cursor {
+    display: none;
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+/* Title */
+.title-wrapper {
+    margin: 3rem 0 4rem;
+    display: flex;
+    justify-content: center;
+}
+
+.title-svg {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+}
+
+.title-svg text {
+    font-size: 48px;
+    font-weight: 700;
+    fill: var(--text-light);
+    letter-spacing: 2px;
+}
+
+/* Explorer Grid */
+.explorer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.folder-card {
+    background: var(--bg-card);
+    border: 2px solid transparent;
+    border-radius: 12px;
+    padding: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.folder-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(168, 85, 247, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.folder-card:hover::before {
+    left: 100%;
+}
+
+.folder-card:hover {
+    border-color: var(--purple-primary);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(168, 85, 247, 0.3);
+}
+
+.folder-card.coming-soon {
+    opacity: 0.6;
+    cursor: default;
+}
+
+.folder-card.coming-soon:hover {
+    transform: none;
+    border-color: transparent;
+    box-shadow: none;
+}
+
+.folder-icon {
+    width: 64px;
+    height: 64px;
+    color: var(--purple-primary);
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.folder-card:hover .folder-icon {
+    transform: scale(1.1) rotateZ(-5deg);
+}
+
+.folder-card.coming-soon:hover .folder-icon {
+    transform: none;
+}
+
+.folder-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.folder-info {
+    position: relative;
+    z-index: 1;
+}
+
+.folder-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-light);
+}
+
+.folder-description {
+    font-size: 0.95rem;
+    color: var(--text-gray);
+    line-height: 1.5;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    color: var(--text-gray);
+    font-size: 0.9rem;
+}
+
+/* Decorative Dots */
+.decorative-dots {
+    display: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .title-svg text {
+        font-size: 32px;
+    }
+
+    .explorer-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+}
+
+/* Loading Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.folder-card {
+    animation: fadeIn 0.6s ease-out backwards;
+}
+
+.folder-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.folder-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.folder-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
