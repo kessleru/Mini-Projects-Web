@@ -21,7 +21,3 @@ Sistema de arrastar e soltar elementos na página.
 ## Autor
 
 [Kessleru](https://github.com/kessleru)
-
-## Licença
-
-Este projeto está sob a licença MIT.
