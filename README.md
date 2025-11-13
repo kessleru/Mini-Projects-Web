@@ -12,6 +12,9 @@ Timer de contagem regressiva com interface moderna e animações suaves.
 ### 🎯 Drag-Drop
 Sistema de arrastar e soltar elementos na página.
 
+### 📄 Single-Page Applications
+Aplicação de página única (SPA) com navegação dinâmica sem recarregamento de página.
+
 ## Tecnologias Utilizadas
 
 - HTML5
