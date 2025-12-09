@@ -1,99 +1,182 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Explorador de Projetos - Kessleru</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <div class="container">
-        <header>
-            <a href="https://github.com/kessleru" target="_blank" class="logo-link">
-                <span class="logo">Kessleru</span><span class="cursor">_</span>
-            </a>
-        </header>
+      <header>
+        <a href="https://github.com/kessleru" target="_blank" class="logo-link">
+          <span class="logo">Kessleru</span><span class="cursor">_</span>
+        </a>
+      </header>
 
-        <main>
-            <div class="title-wrapper">
-                <svg class="title-svg" viewBox="0 0 600 100" xmlns="http://www.w3.org/2000/svg">
-                    <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle">
-                        Explorador de Pastas
-                    </text>
-                </svg>
+      <main>
+        <div class="title-wrapper">
+          <svg
+            class="title-svg"
+            viewBox="0 0 600 100"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <text
+              x="50%"
+              y="50%"
+              text-anchor="middle"
+              dominant-baseline="middle"
+            >
+              Explorador de Pastas
+            </text>
+          </svg>
+        </div>
+
+        <div class="explorer-grid">
+          <div class="folder-card" data-path="./Countdown">
+            <div class="folder-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10 4H4C2.89543 4 2 4.89543 2 6V18C2 19.1046 2.89543 20 4 20H20C21.1046 20 22 19.1046 22 18V8C22 6.89543 21.1046 6 20 6H12L10 4Z"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
             </div>
-
-            <div class="explorer-grid">
-                <div class="folder-card" data-path="./Countdown">
-                    <div class="folder-icon">
-                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M10 4H4C2.89543 4 2 4.89543 2 6V18C2 19.1046 2.89543 20 4 20H20C21.1046 20 22 19.1046 22 18V8C22 6.89543 21.1046 6 20 6H12L10 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <div class="folder-info">
-                        <h3 class="folder-name">Countdown</h3>
-                        <p class="folder-description">Timer de contagem regressiva</p>
-                    </div>
-                </div>
-
-                <div class="folder-card" data-path="./Drag-Drop">
-                    <div class="folder-icon">
-                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M10 4H4C2.89543 4 2 4.89543 2 6V18C2 19.1046 2.89543 20 4 20H20C21.1046 20 22 19.1046 22 18V8C22 6.89543 21.1046 6 20 6H12L10 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <div class="folder-info">
-                        <h3 class="folder-name">Drag-Drop</h3>
-                        <p class="folder-description">Sistema de arrastar e soltar</p>
-                    </div>
-                </div>
-
-                <div class="folder-card" data-path="./Single-Page-Applications">
-                    <div class="folder-icon">
-                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M10 4H4C2.89543 4 2 4.89543 2 6V18C2 19.1046 2.89543 20 4 20H20C21.1046 20 22 19.1046 22 18V8C22 6.89543 21.1046 6 20 6H12L10 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <div class="folder-info">
-                        <h3 class="folder-name">Single-Page-Applications</h3>
-                        <p class="folder-description">Aplicação de página única com navegação dinâmica</p>
-                    </div>
-                </div>
-
-                <div class="folder-card" data-path="./Welcome-Page">
-                    <div class="folder-icon">
-                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M10 4H4C2.89543 4 2 4.89543 2 6V18C2 19.1046 2.89543 20 4 20H20C21.1046 20 22 19.1046 22 18V8C22 6.89543 21.1046 6 20 6H12L10 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <div class="folder-info">
-                        <h3 class="folder-name">Welcome-Page</h3>
-                        <p class="folder-description">Página de entrada com animações</p>
-                    </div>
-                </div>
-
-                <div class="folder-card coming-soon">
-                    <div class="folder-icon">
-                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M10 4H4C2.89543 4 2 4.89543 2 6V18C2 19.1046 2.89543 20 4 20H20C21.1046 20 22 19.1046 22 18V8C22 6.89543 21.1046 6 20 6H12L10 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <div class="folder-info">
-                        <h3 class="folder-name">Em Breve...</h3>
-                        <p class="folder-description">Mais projetos chegando</p>
-                    </div>
-                </div>
+            <div class="folder-info">
+              <h3 class="folder-name">Countdown</h3>
+              <p class="folder-description">Timer de contagem regressiva</p>
             </div>
-        </main>
+          </div>
 
-        <footer>
-            <p>Mini Projects Collection</p>
-        </footer>
+          <div class="folder-card" data-path="./CRUD">
+            <div class="folder-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10 4H4C2.89543 4 2 4.89543 2 6V18C2 19.1046 2.89543 20 4 20H20C21.1046 20 22 19.1046 22 18V8C22 6.89543 21.1046 6 20 6H12L10 4Z"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <div class="folder-info">
+              <h3 class="folder-name">CRUD</h3>
+              <p class="folder-description">Um simples CRUD em js</p>
+            </div>
+          </div>
+
+          <div class="folder-card" data-path="./Drag-Drop">
+            <div class="folder-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10 4H4C2.89543 4 2 4.89543 2 6V18C2 19.1046 2.89543 20 4 20H20C21.1046 20 22 19.1046 22 18V8C22 6.89543 21.1046 6 20 6H12L10 4Z"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <div class="folder-info">
+              <h3 class="folder-name">Drag-Drop</h3>
+              <p class="folder-description">Sistema de arrastar e soltar</p>
+            </div>
+          </div>
+
+          <div class="folder-card" data-path="./Single-Page-Applications">
+            <div class="folder-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10 4H4C2.89543 4 2 4.89543 2 6V18C2 19.1046 2.89543 20 4 20H20C21.1046 20 22 19.1046 22 18V8C22 6.89543 21.1046 6 20 6H12L10 4Z"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <div class="folder-info">
+              <h3 class="folder-name">Single-Page-Applications</h3>
+              <p class="folder-description">
+                Aplicação de página única com navegação dinâmica
+              </p>
+            </div>
+          </div>
+
+          <div class="folder-card" data-path="./Welcome-Page">
+            <div class="folder-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10 4H4C2.89543 4 2 4.89543 2 6V18C2 19.1046 2.89543 20 4 20H20C21.1046 20 22 19.1046 22 18V8C22 6.89543 21.1046 6 20 6H12L10 4Z"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <div class="folder-info">
+              <h3 class="folder-name">Welcome-Page</h3>
+              <p class="folder-description">Página de entrada com animações</p>
+            </div>
+          </div>
+
+          <div class="folder-card coming-soon">
+            <div class="folder-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10 4H4C2.89543 4 2 4.89543 2 6V18C2 19.1046 2.89543 20 4 20H20C21.1046 20 22 19.1046 22 18V8C22 6.89543 21.1046 6 20 6H12L10 4Z"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <div class="folder-info">
+              <h3 class="folder-name">Em Breve...</h3>
+              <p class="folder-description">Mais projetos chegando</p>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer>
+        <p>Mini Projects Collection</p>
+      </footer>
     </div>
 
     <div class="decorative-dots top-left"></div>
     <div class="decorative-dots bottom-right"></div>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
